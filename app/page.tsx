@@ -6,24 +6,24 @@ export default function Home() {
   const testimonials = [
     {
       id: 1,
-      name: 'John Doe',
+      name: 'Priya Sharma',
       role: 'Patient',
       content: 'The best dental care I\'ve ever received. The staff is incredibly professional and caring.',
-      image: 'https://randomuser.me/api/portraits/women/43.jpg'
+      image: 'P'
     },
     {
       id: 2,
-      name: 'Jane Smith',
+      name: 'Amit Kumar',
       role: 'Patient',
       content: 'Painless procedures and a welcoming environment. Highly recommended!',
-      image: 'https://randomuser.me/api/portraits/men/32.jpg'
+      image: 'A'
     },
     {
       id: 3,
-      name: 'Robert Johnson',
+      name: 'Anjali Patel',
       role: 'Patient',
       content: 'Outstanding service and attention to detail. My smile has never looked better!',
-      image: 'https://randomuser.me/api/portraits/women/65.jpg'
+      image: 'A'
     }
   ];
 
@@ -225,14 +225,8 @@ export default function Home() {
             {testimonials.map((testimonial) => (
               <div key={testimonial.id} className="bg-white p-8 rounded-lg shadow-lg">
                 <div className="flex items-center mb-4">
-                  <div className="relative h-16 w-16 rounded-full overflow-hidden mr-4">
-                    <Image 
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      sizes="64px"
-                    />
+                  <div className="h-16 w-16 rounded-full bg-blue-600 flex items-center justify-center text-white text-xl font-bold mr-4">
+                    {testimonial.image}
                   </div>
                   <div>
                     <h4 className="text-lg font-semibold text-gray-900">{testimonial.name}</h4>
