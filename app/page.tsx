@@ -144,17 +144,17 @@ export default function Home() {
               {
                 title: "General Dentistry",
                 description: "Routine checkups, cleanings, and treatments to maintain optimal oral health.",
-                image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=500&auto=format&fit=crop"
+                image: "/general-dentistry.jpg"
               },
               {
                 title: "Cosmetic Dentistry",
                 description: "Enhance your smile with our cosmetic dental procedures and treatments.",
-                image: "https://images.unsplash.com/photo-1600988331009-40739850d2d6?w=500&auto=format&fit=crop"
+                image: "/cosmetic.jpg"
               },
               {
                 title: "Teeth Whitening",
                 description: "Professional teeth whitening for a brighter, more confident smile.",
-                image: "https://images.unsplash.com/photo-1550748169-9c0174196d4b?w=500&auto=format&fit=crop"
+                image: "/teeth-whitening.jpg"
               }
             ].map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
@@ -198,13 +198,15 @@ export default function Home() {
             </div>
             <div className="lg:w-1/2">
               <div className="rounded-lg overflow-hidden shadow-xl">
-                <Image 
-                  src="https://images.unsplash.com/photo-1600988331009-40739850d2d6?w=800&h=600&auto=format&fit=crop" 
-                  alt="Dental Clinic Interior"
-                  width={800}
-                  height={600}
+                <video
+                  autoPlay
+                  loop
+                  muted
                   className="w-full h-auto"
-                />
+                >
+                  <source src="/clinic-interior.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
               </div>
             </div>
           </div>
@@ -267,10 +269,10 @@ export default function Home() {
             <div>
               <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
               <address className="not-italic text-gray-400 space-y-2">
-                <p>123 Dental Street</p>
-                <p>New York, NY 10001</p>
-                <p>Phone: (555) 123-4567</p>
-                <p>Email: info@dentalclinic.com</p>
+                <p>Sushilpura, Ajmer Rd, near community centre,</p>
+                <p>Sodala, Jaipur, Rajasthan 302006</p>
+                <p>Phone: 097842 60590</p>
+                <p>Email: Sattysingh3285@gmail.com</p>
               </address>
             </div>
             
