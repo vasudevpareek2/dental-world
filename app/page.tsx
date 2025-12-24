@@ -53,8 +53,8 @@ export default function Home() {
         </div>
         
         <div className="relative z-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Smile with Confidence at Your Trusted Dental Clinic</h1>
-          <p className="text-xl md:text-2xl mb-8">Comprehensive dental care for all ages with gentle, expert professionals.</p>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">Best Dental Solutions in Jaipur - Dental World Jaipur</h1>
+          <p className="text-xl md:text-2xl mb-8">Your trusted dental clinic in Jaipur offering comprehensive dental care for all ages with gentle, expert professionals.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <AppointmentButton className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md text-lg transition duration-300">
               Book Appointment
@@ -71,16 +71,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-center lg:justify-between">
             <div className="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
-              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-6">Meet Our Lead Dentist</h2>
+              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-6">Meet Our Lead Dentist in Jaipur</h2>
               <h3 className="text-2xl font-semibold text-blue-600 mb-4">Dr. Satyendra Singh</h3>
               <p className="text-lg text-gray-600 mb-4">BDS, MDS - Specialist in Root canal therapy & Restorative Dentistry</p>
               <p className="text-gray-600 mb-6">
-                With 5 years of dedicated experience in dentistry, Dr. Satyendra Singh is committed to providing exceptional dental care 
-                using the latest techniques and technology. He specializes in cosmetic dentistry, smile makeovers, and restorative procedures.
+                With 5 years of dedicated experience in dentistry, Dr. Satyendra Singh is committed to providing the best dental solutions in Jaipur 
+                using the latest techniques and technology. He specializes in cosmetic dentistry, smile makeovers, and restorative procedures at Dental World Jaipur.
               </p>
               <p className="text-gray-600 mb-8">
                 Dr. Singh believes in creating beautiful, healthy smiles while ensuring patient comfort and satisfaction. 
-                His gentle approach and attention to detail have earned him the trust of countless patients.
+                His gentle approach and attention to detail have earned him the trust of countless patients in Jaipur.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center">
@@ -107,7 +107,7 @@ export default function Home() {
               <div className="rounded-lg overflow-hidden shadow-xl">
                 <Image 
                   src="/doctor-image.jpg" 
-                  alt="Dr. Satyendra Singh"
+                  alt="Dr. Satyendra Singh - Best Dentist in Jaipur at Dental World Jaipur"
                   width={600}
                   height={700}
                   className="w-full h-auto"
@@ -122,10 +122,10 @@ export default function Home() {
       <section id="services" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">Our Dental Services</h2>
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">Best Dental Services in Jaipur</h2>
             <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive dental care for the whole family. We offer a wide range of services 
-              to meet all your oral health needs with advanced technology and expert care.
+              Dental World Jaipur offers comprehensive dental care for the whole family. We provide the best dental solutions in Jaipur 
+              with a wide range of services to meet all your oral health needs using advanced technology and expert care.
             </p>
           </div>
           
@@ -138,7 +138,7 @@ export default function Home() {
                 <div className="relative h-48 bg-gray-200 overflow-hidden">
                   <Image 
                     src={service.image} 
-                    alt={service.title}
+                    alt={`${service.title} - Dental World Jaipur`}
                     fill
                     style={{ objectFit: 'cover' }}
                     className="w-full h-full group-hover:scale-110 transition-transform duration-300"
@@ -220,10 +220,10 @@ export default function Home() {
           {/* Additional CTA */}
           <div className="mt-16 text-center">
             <div className="bg-blue-600 rounded-lg p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Need a Specific Service?</h3>
+              <h3 className="text-2xl font-bold mb-4">Need the Best Dental Solutions in Jaipur?</h3>
               <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                Our experienced team is here to help with all your dental needs. 
-                Contact us today to schedule a consultation.
+                Dental World Jaipur's experienced team is here to help with all your dental needs. 
+                Contact us today to schedule a consultation at our dental clinic in Jaipur.
               </p>
               <AppointmentButton className="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-md text-lg hover:bg-blue-50 transition duration-300">
                 Schedule Consultation
@@ -238,14 +238,14 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-center lg:justify-between">
             <div className="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
-              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-6">About Our Clinic</h2>
+              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-6">About Dental World Jaipur - Best Dental Clinic in Jaipur</h2>
               <p className="text-lg text-gray-600 mb-6">
-                We provide personalized dental care using the latest techniques in a comfortable environment. 
-                Our team of experienced professionals is dedicated to ensuring your visit is as pleasant and effective as possible.
+                Dental World Jaipur provides personalized dental care using the latest techniques in a comfortable environment. 
+                As one of the best dental clinics in Jaipur, our team of experienced professionals is dedicated to ensuring your visit is as pleasant and effective as possible.
               </p>
               <p className="text-lg text-gray-600 mb-8">
-                With state-of-the-art technology and a patient-centered approach, we're committed to delivering exceptional dental care 
-                that meets the highest standards of quality and safety.
+                With state-of-the-art technology and a patient-centered approach, we're committed to delivering the best dental solutions in Jaipur 
+                that meet the highest standards of quality and safety.
               </p>
               <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md text-lg transition duration-300">
                 Learn More About Us
@@ -274,8 +274,8 @@ export default function Home() {
       <section id="testimonials" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">What Our Patients Say</h2>
-            <p className="mt-4 text-xl text-gray-600">Hear from our satisfied patients</p>
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">What Our Patients Say About Dental World Jaipur</h2>
+            <p className="mt-4 text-xl text-gray-600">Hear from our satisfied patients in Jaipur</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -301,8 +301,8 @@ export default function Home() {
       <section id="gallery" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Our Gallery</h2>
-            <p className="mt-4 text-xl text-gray-600">Take a look at our clinic and services</p>
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Dental World Jaipur Gallery</h2>
+            <p className="mt-4 text-xl text-gray-600">Take a look at our dental clinic in Jaipur and services</p>
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -337,8 +337,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1">
-              <h3 className="text-xl font-bold mb-4">Dental World</h3>
-              <p className="text-gray-400">Your trusted partner for comprehensive dental care and beautiful smiles.</p>
+              <h3 className="text-xl font-bold mb-4">Dental World Jaipur</h3>
+              <p className="text-gray-400">Your trusted partner for the best dental solutions in Jaipur. Comprehensive dental care and beautiful smiles at our dental clinic in Jaipur.</p>
             </div>
             
             <div>

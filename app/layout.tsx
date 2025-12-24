@@ -6,9 +6,9 @@ import FloatingSocialIcons from './components/FloatingSocialIcons';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Dental World - Your Trusted Dental Care Partner',
-  description: 'Comprehensive dental care for all ages with gentle, expert professionals.',
-  keywords: 'dental, dentist, dental world, teeth cleaning, cosmetic dentistry, teeth whitening',
+  title: 'Dental World Jaipur - Best Dental Solutions in Jaipur | Expert Dentist',
+  description: 'Dental World Jaipur offers the best dental solutions in Jaipur. Expert dentist providing comprehensive dental care, cosmetic dentistry, and advanced treatments in Sodala, Jaipur.',
+  keywords: 'dental world jaipur, best dental solutions in jaipur, dentist in jaipur, dental clinic jaipur, best dentist jaipur, dental care jaipur, jaipur dental services, cosmetic dentistry jaipur, root canal treatment jaipur, teeth whitening jaipur, dental implants jaipur',
 };
 
 export default function RootLayout({

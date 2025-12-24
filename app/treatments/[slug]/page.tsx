@@ -59,7 +59,7 @@ export default async function TreatmentCaseStudiesPage({ params }: PageProps) {
               <div className="relative h-80 rounded-lg overflow-hidden shadow-xl">
                 <Image
                   src={treatment.coverImage}
-                  alt={treatment.name}
+                  alt={`${treatment.name} - Dental World Jaipur | Best Dental Solutions in Jaipur`}
                   fill
                   style={{ objectFit: "cover" }}
                   className="w-full h-full"
@@ -72,10 +72,10 @@ export default async function TreatmentCaseStudiesPage({ params }: PageProps) {
                 {treatment.category}
               </span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-                {treatment.name}
+                {treatment.name} - Best Dental Solutions in Jaipur | Dental World Jaipur
               </h1>
               <p className="text-xl text-gray-600 mb-6">
-                {treatment.description}
+                {treatment.description} At Dental World Jaipur, we provide the best dental solutions in Jaipur with expert care and advanced technology.
               </p>
               <div className="flex items-center gap-4 text-gray-600">
                 <div className="flex items-center">
@@ -227,10 +227,10 @@ export default async function TreatmentCaseStudiesPage({ params }: PageProps) {
       <section className="py-20 bg-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Interested in This Treatment?
+            Interested in This Treatment at Dental World Jaipur?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Schedule a consultation to discuss your specific case
+            Schedule a consultation at our dental clinic in Jaipur to discuss your specific case and get the best dental solutions in Jaipur
           </p>
           <AppointmentButton className="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-md text-lg hover:bg-blue-50 transition duration-300">
             Book Appointment
@@ -243,9 +243,9 @@ export default async function TreatmentCaseStudiesPage({ params }: PageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1">
-              <h3 className="text-xl font-bold mb-4">Dental World</h3>
+              <h3 className="text-xl font-bold mb-4">Dental World Jaipur</h3>
               <p className="text-gray-400">
-                Your trusted partner for comprehensive dental care and beautiful smiles.
+                Your trusted partner for the best dental solutions in Jaipur. Comprehensive dental care and beautiful smiles at our dental clinic in Jaipur.
               </p>
             </div>
 

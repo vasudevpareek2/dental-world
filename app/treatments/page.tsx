@@ -15,11 +15,11 @@ export default function TreatmentsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-              Our Treatments
+              Best Dental Treatments in Jaipur - Dental World Jaipur
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive dental treatments backed by years of expertise and advanced technology. 
-              Explore our case studies to see real results.
+              Dental World Jaipur offers comprehensive dental treatments backed by years of expertise and advanced technology. 
+              Explore our case studies to see real results from the best dental solutions in Jaipur.
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ export default function TreatmentsPage() {
                   <div className="relative h-64 overflow-hidden">
                     <Image
                       src={treatment.coverImage}
-                      alt={treatment.name}
+                      alt={`${treatment.name} - Best Dental Solutions in Jaipur | Dental World Jaipur`}
                       fill
                       style={{ objectFit: "cover" }}
                       className="group-hover:scale-110 transition-transform duration-300"
@@ -82,10 +82,10 @@ export default function TreatmentsPage() {
       <section className="py-20 bg-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Start Your Treatment?
+            Ready to Start Your Treatment at Dental World Jaipur?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Contact us today to schedule a consultation
+            Contact us today to schedule a consultation for the best dental solutions in Jaipur
           </p>
             <AppointmentButton className="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-md text-lg hover:bg-blue-50 transition duration-300">
               Book Appointment
@@ -98,9 +98,9 @@ export default function TreatmentsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1">
-              <h3 className="text-xl font-bold mb-4">Dental World</h3>
+              <h3 className="text-xl font-bold mb-4">Dental World Jaipur</h3>
               <p className="text-gray-400">
-                Your trusted partner for comprehensive dental care and beautiful smiles.
+                Your trusted partner for the best dental solutions in Jaipur. Comprehensive dental care and beautiful smiles at our dental clinic in Jaipur.
               </p>
             </div>
 

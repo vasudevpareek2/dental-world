@@ -51,8 +51,9 @@ export default function Navigation({ currentPage = "home" }: NavigationProps) {
               href="/"
               className="text-2xl font-bold text-blue-600"
               onClick={closeMobileMenu}
+              title="Dental World Jaipur - Best Dental Solutions in Jaipur"
             >
-              Dental World
+              Dental World Jaipur
             </Link>
           </div>
 

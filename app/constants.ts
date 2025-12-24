@@ -2,37 +2,37 @@ export const GALLERY_IMAGES = [
   {
     id: 1,
     src: "/doctor-image.jpg",
-    alt: "Our dental team",
+    alt: "Dental World Jaipur team - Best dental solutions in Jaipur",
     category: "Team"
   },
   {
     id: 2,
     src: "/general-dentistry.jpg",
-    alt: "General dentistry services",
+    alt: "General dentistry services at Dental World Jaipur - Best dental clinic in Jaipur",
     category: "Services"
   },
   {
     id: 3,
     src: "/cosmetic.jpg",
-    alt: "Cosmetic dentistry",
+    alt: "Cosmetic dentistry Jaipur - Dental World Jaipur",
     category: "Services"
   },
   {
     id: 4,
     src: "/teeth-whitening.jpg",
-    alt: "Teeth whitening treatment",
+    alt: "Teeth whitening treatment in Jaipur - Best dental solutions in Jaipur",
     category: "Services"
   },
   {
     id: 5,
     src: "/doctor-image.jpg",
-    alt: "Modern dental equipment",
+    alt: "Modern dental equipment at Dental World Jaipur - Best dentist in Jaipur",
     category: "Facility"
   },
   {
     id: 6,
     src: "/general-dentistry.jpg",
-    alt: "Comfortable treatment rooms",
+    alt: "Comfortable treatment rooms at Dental World Jaipur - Dental clinic Jaipur",
     category: "Facility"
   }
 ];
