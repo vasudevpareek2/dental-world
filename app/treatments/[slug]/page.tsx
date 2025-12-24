@@ -3,6 +3,7 @@ import Link from "next/link";
 import { TREATMENTS } from "../../constants";
 import { notFound } from "next/navigation";
 import Navigation from "../../components/Navigation";
+import AppointmentButton from "../../components/AppointmentButton";
 
 interface PageProps {
   params: Promise<{

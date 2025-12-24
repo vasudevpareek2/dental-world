@@ -29,6 +29,18 @@ export default function Navigation({ currentPage = "home" }: NavigationProps) {
     { href: "/#contact", label: "Contact", id: "contact" },
   ];
 
+  // Handle home page anchor links differently
+  const getHref = (link: typeof navLinks[0]) => {
+    if (link.id === "home") {
+      return "/";
+    }
+    // If we're on home page, use anchor links, otherwise use full path
+    if (currentPage === "home" && link.href.startsWith("/#")) {
+      return link.href.substring(1); // Remove leading slash for anchor links
+    }
+    return link.href;
+  };
+
   return (
     <nav className="fixed w-full bg-white bg-opacity-90 shadow-md z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -130,12 +142,11 @@ export default function Navigation({ currentPage = "home" }: NavigationProps) {
             </Link>
           ))}
           <div className="pt-2">
-            <AppointmentButton
-              onClick={closeMobileMenu}
-              className="w-full bg-blue-600 text-white px-6 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition duration-300 text-center"
-            >
-              Book Appointment
-            </AppointmentButton>
+            <div onClick={closeMobileMenu}>
+              <AppointmentButton className="w-full bg-blue-600 text-white px-6 py-2 rounded-md text-base font-medium hover:bg-blue-700 transition duration-300 text-center">
+                Book Appointment
+              </AppointmentButton>
+            </div>
           </div>
         </div>
       </div>

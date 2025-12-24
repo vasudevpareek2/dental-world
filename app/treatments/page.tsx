@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { TREATMENTS } from "../constants";
 import Navigation from "../components/Navigation";
+import AppointmentButton from "../components/AppointmentButton";
 
 export default function TreatmentsPage() {
   return (
