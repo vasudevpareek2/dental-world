@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { GALLERY_IMAGES, SERVICES } from './constants';
+import Navigation from './components/Navigation';
 import AppointmentButton from './components/AppointmentButton';
 
 export default function Home() {
@@ -32,27 +33,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Navigation */}
-      <nav className="fixed w-full bg-white bg-opacity-90 shadow-md z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-20">
-            <div className="flex-shrink-0 flex items-center">
-              <div className="text-2xl font-bold text-blue-600">Dental World</div>
-            </div>
-            <div className="hidden md:ml-6 md:flex md:items-center md:space-x-8">
-              <Link href="#" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</Link>
-              <Link href="#about" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</Link>
-              <Link href="#services" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</Link>
-              <Link href="/treatments" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Treatments</Link>
-              <Link href="#gallery" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Gallery</Link>
-              <Link href="#testimonials" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Testimonials</Link>
-              <Link href="#contact" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</Link>
-              <AppointmentButton className="ml-8 bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">
-                Book Appointment
-              </AppointmentButton>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navigation currentPage="home" />
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
@@ -61,6 +42,8 @@ export default function Home() {
             autoPlay
             loop
             muted
+            playsInline
+            preload="auto"
             className="w-full h-full object-cover"
           >
             <source src="/hero-video.mp4" type="video/mp4" />
@@ -90,7 +73,7 @@ export default function Home() {
             <div className="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
               <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-6">Meet Our Lead Dentist</h2>
               <h3 className="text-2xl font-semibold text-blue-600 mb-4">Dr. Satyendra Singh</h3>
-              <p className="text-lg text-gray-600 mb-4">BDS, MDS - Specialist in Cosmetic & Restorative Dentistry</p>
+              <p className="text-lg text-gray-600 mb-4">BDS, MDS - Specialist in Root canal therapy & Restorative Dentistry</p>
               <p className="text-gray-600 mb-6">
                 With 5 years of dedicated experience in dentistry, Dr. Satyendra Singh is committed to providing exceptional dental care 
                 using the latest techniques and technology. He specializes in cosmetic dentistry, smile makeovers, and restorative procedures.
@@ -110,7 +93,7 @@ export default function Home() {
                   <svg className="h-5 w-5 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-gray-700">MDS from NIMMS Dental College</span>
+                  <span className="text-gray-700">MDS from NIMS Dental College And Hospital</span>
                 </div>
                 <div className="flex items-center">
                   <svg className="h-5 w-5 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
@@ -274,6 +257,8 @@ export default function Home() {
                   autoPlay
                   loop
                   muted
+                  playsInline
+                  preload="auto"
                   className="w-full h-auto"
                 >
                   <source src="/clinic-interior.mp4" type="video/mp4" />
