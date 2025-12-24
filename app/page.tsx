@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { GALLERY_IMAGES, SERVICES } from './constants';
+import AppointmentButton from './components/AppointmentButton';
 
 export default function Home() {
   // Testimonial data
@@ -40,11 +42,13 @@ export default function Home() {
               <Link href="#" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Home</Link>
               <Link href="#about" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">About</Link>
               <Link href="#services" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Services</Link>
+              <Link href="/treatments" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Treatments</Link>
+              <Link href="#gallery" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Gallery</Link>
               <Link href="#testimonials" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Testimonials</Link>
               <Link href="#contact" className="text-gray-800 hover:text-blue-600 px-3 py-2 text-sm font-medium">Contact</Link>
-              <button className="ml-8 bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">
+              <AppointmentButton className="ml-8 bg-blue-600 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-blue-700 transition duration-300">
                 Book Appointment
-              </button>
+              </AppointmentButton>
             </div>
           </div>
         </div>
@@ -69,9 +73,9 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">Smile with Confidence at Your Trusted Dental Clinic</h1>
           <p className="text-xl md:text-2xl mb-8">Comprehensive dental care for all ages with gentle, expert professionals.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="#" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md text-lg transition duration-300">
+            <AppointmentButton className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md text-lg transition duration-300">
               Book Appointment
-            </Link>
+            </AppointmentButton>
             <Link href="#about" className="bg-transparent hover:bg-white hover:text-gray-800 text-white font-bold py-3 px-8 border-2 border-white rounded-md text-lg transition duration-300">
               Learn More
             </Link>
@@ -135,45 +139,113 @@ export default function Home() {
       <section id="services" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Our Dental Services</h2>
-            <p className="mt-4 text-xl text-gray-600">Comprehensive dental care for the whole family</p>
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">Our Dental Services</h2>
+            <p className="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+              Comprehensive dental care for the whole family. We offer a wide range of services 
+              to meet all your oral health needs with advanced technology and expert care.
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "General Dentistry",
-                description: "Routine checkups, cleanings, and treatments to maintain optimal oral health.",
-                image: "/general-dentistry.jpg"
-              },
-              {
-                title: "Cosmetic Dentistry",
-                description: "Enhance your smile with our cosmetic dental procedures and treatments.",
-                image: "/cosmetic.jpg"
-              },
-              {
-                title: "Teeth Whitening",
-                description: "Professional teeth whitening for a brighter, more confident smile.",
-                image: "/teeth-whitening.jpg"
-              }
-            ].map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="h-48 bg-gray-200 relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {SERVICES.map((service) => (
+              <div 
+                key={service.id} 
+                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
+              >
+                <div className="relative h-48 bg-gray-200 overflow-hidden">
                   <Image 
                     src={service.image} 
                     alt={service.title}
                     fill
                     style={{ objectFit: 'cover' }}
-                    className="w-full h-full"
+                    className="w-full h-full group-hover:scale-110 transition-transform duration-300"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute top-4 right-4">
+                    <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                      {service.category}
+                    </span>
+                  </div>
+                  <div className="absolute bottom-4 left-4 right-4">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <svg 
+                        className="w-8 h-8 text-blue-600 mb-2" 
+                        fill="none" 
+                        stroke="currentColor" 
+                        viewBox="0 0 24 24"
+                      >
+                        <path 
+                          strokeLinecap="round" 
+                          strokeLinejoin="round" 
+                          strokeWidth={2} 
+                          d={service.icon}
+                        />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600">{service.description}</p>
+                  <div className="flex items-start justify-between mb-3">
+                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
+                    <svg 
+                      className="w-6 h-6 text-blue-600 flex-shrink-0 ml-2" 
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d={service.icon}
+                      />
+                    </svg>
+                  </div>
+                  <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
+                  <div className="border-t border-gray-200 pt-4">
+                    <p className="text-sm font-semibold text-gray-700 mb-2">Key Features:</p>
+                    <ul className="space-y-1">
+                      {service.features.slice(0, 3).map((feature, index) => (
+                        <li key={index} className="flex items-center text-sm text-gray-600">
+                          <svg 
+                            className="w-4 h-4 text-blue-600 mr-2 flex-shrink-0" 
+                            fill="currentColor" 
+                            viewBox="0 0 20 20"
+                          >
+                            <path 
+                              fillRule="evenodd" 
+                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" 
+                              clipRule="evenodd" 
+                            />
+                          </svg>
+                          {feature}
+                        </li>
+                      ))}
+                      {service.features.length > 3 && (
+                        <li className="text-sm text-blue-600 font-medium">
+                          +{service.features.length - 3} more
+                        </li>
+                      )}
+                    </ul>
+                  </div>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Additional CTA */}
+          <div className="mt-16 text-center">
+            <div className="bg-blue-600 rounded-lg p-8 text-white">
+              <h3 className="text-2xl font-bold mb-4">Need a Specific Service?</h3>
+              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+                Our experienced team is here to help with all your dental needs. 
+                Contact us today to schedule a consultation.
+              </p>
+              <AppointmentButton className="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-md text-lg hover:bg-blue-50 transition duration-300">
+                Schedule Consultation
+              </AppointmentButton>
+            </div>
           </div>
         </div>
       </section>
@@ -240,6 +312,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Gallery Section */}
+      <section id="gallery" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Our Gallery</h2>
+            <p className="mt-4 text-xl text-gray-600">Take a look at our clinic and services</p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {GALLERY_IMAGES.map((image) => (
+              <div 
+                key={image.id} 
+                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+              >
+                <div className="aspect-square relative">
+                  <Image 
+                    src={image.src} 
+                    alt={image.alt}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    className="w-full h-full transition-transform duration-300 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <p className="text-white font-semibold">{image.alt}</p>
+                    <p className="text-white/80 text-sm">{image.category}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer id="contact" className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -255,6 +362,8 @@ export default function Home() {
                 <li><Link href="#" className="text-gray-400 hover:text-white">Home</Link></li>
                 <li><Link href="#about" className="text-gray-400 hover:text-white">About Us</Link></li>
                 <li><Link href="#services" className="text-gray-400 hover:text-white">Services</Link></li>
+                <li><Link href="/treatments" className="text-gray-400 hover:text-white">Treatments</Link></li>
+                <li><Link href="#gallery" className="text-gray-400 hover:text-white">Gallery</Link></li>
                 <li><Link href="#testimonials" className="text-gray-400 hover:text-white">Testimonials</Link></li>
                 <li><Link href="#contact" className="text-gray-400 hover:text-white">Contact</Link></li>
               </ul>
