@@ -1,77 +1,91 @@
 import Image from "next/image";
 import Link from "next/link";
-import { TREATMENTS } from "../constants";
 import Navigation from "../components/Navigation";
 import AppointmentButton from "../components/AppointmentButton";
+import { BLOG_POSTS } from "./constants";
 
-export default function TreatmentsPage() {
+export default function BlogsPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <Navigation currentPage="treatments" />
+      <Navigation currentPage="blogs" />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-b from-blue-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
-              Best Dental Treatments in Jaipur - Dental World Jaipur
+              Dental Health Blog - Dental World Jaipur
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Dental World Jaipur offers comprehensive dental treatments backed by years of expertise and advanced technology. 
-              Explore our case studies to see real results from the best dental solutions in Jaipur.
+              Expert dental care tips, treatment guides, and oral health insights from the best dental clinic in Jaipur. 
+              Stay informed about the latest in dental care and best dental solutions in Jaipur.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Treatments Grid */}
+      {/* Blogs Grid */}
       <section className="py-12 pb-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {TREATMENTS.map((treatment) => (
+            {BLOG_POSTS.map((blog) => (
               <Link
-                key={treatment.id}
-                href={`/treatments/${treatment.slug}`}
+                key={blog.id}
+                href={`/blogs/${blog.slug}`}
                 className="group block"
               >
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+                <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 h-full flex flex-col">
                   <div className="relative h-64 overflow-hidden">
                     <Image
-                      src={treatment.coverImage}
-                      alt={`${treatment.name} - Best Dental Solutions in Jaipur | Dental World Jaipur`}
+                      src={blog.image}
+                      alt={blog.title}
                       fill
                       style={{ objectFit: "cover" }}
                       className="group-hover:scale-110 transition-transform duration-300"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-                    <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <span className="inline-block bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-2">
-                        {treatment.category}
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                        {blog.category}
                       </span>
-                      <h3 className="text-2xl font-bold text-white mb-1">
-                        {treatment.name}
-                      </h3>
-                      <p className="text-white/90 text-sm">
-                        {treatment.shortName}
-                      </p>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <p className="text-gray-600 mb-4 line-clamp-2">
-                      {treatment.description}
+                  <div className="p-6 flex-grow flex flex-col">
+                    <div className="flex items-center text-sm text-gray-500 mb-3">
+                      <span>{blog.date}</span>
+                      <span className="mx-2">•</span>
+                      <span>{blog.readTime}</span>
+                    </div>
+                    <h2 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                      {blog.title}
+                    </h2>
+                    <p className="text-gray-600 mb-4 flex-grow line-clamp-3">
+                      {blog.excerpt}
                     </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-blue-600 font-semibold text-sm">
-                        {treatment.caseStudies.length} Case Studies
-                      </span>
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-200">
+                      <div className="flex items-center">
+                        <div className="h-8 w-8 rounded-full bg-blue-600 flex items-center justify-center text-white text-sm font-bold mr-2">
+                          {blog.author.split(" ").map(n => n[0]).join("")}
+                        </div>
+                        <span className="text-sm text-gray-600">{blog.author}</span>
+                      </div>
                       <span className="text-blue-600 font-semibold group-hover:translate-x-1 transition-transform duration-300">
-                        View Details →
+                        Read More →
                       </span>
                     </div>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {blog.tags.slice(0, 2).map((tag, index) => (
+                        <span
+                          key={index}
+                          className="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </article>
               </Link>
             ))}
           </div>
@@ -82,14 +96,14 @@ export default function TreatmentsPage() {
       <section className="py-20 bg-blue-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Ready to Start Your Treatment at Dental World Jaipur?
+            Ready to Improve Your Oral Health?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Contact us today to schedule a consultation for the best dental solutions in Jaipur
+            Schedule a consultation at Dental World Jaipur for the best dental solutions in Jaipur
           </p>
-            <AppointmentButton className="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-md text-lg hover:bg-blue-50 transition duration-300">
-              Book Appointment
-            </AppointmentButton>
+          <AppointmentButton className="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-md text-lg hover:bg-blue-50 transition duration-300">
+            Book Appointment
+          </AppointmentButton>
         </div>
       </section>
 
@@ -128,13 +142,8 @@ export default function TreatmentsPage() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#gallery" className="text-gray-400 hover:text-white">
-                    Gallery
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/#testimonials" className="text-gray-400 hover:text-white">
-                    Testimonials
+                  <Link href="/blogs" className="text-gray-400 hover:text-white">
+                    Blog
                   </Link>
                 </li>
                 <li>
@@ -193,37 +202,6 @@ export default function TreatmentsPage() {
                   <li>Sunday: Closed</li>
                 </ul>
               </div>
-            </div>
-          </div>
-
-          {/* Map Section */}
-          <div className="mt-12 pt-8 border-t border-gray-800">
-            <h4 className="text-lg font-semibold mb-4 text-white">Find Us</h4>
-            <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.234567890123!2d75.762811!3d26.9000035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db463bdfd4f73%3A0xf07e86b30000000!2sDental%20World%20%E2%80%93%20Multispeciality%20Dental%20Clinic%2C%20Jaipur!5e0!3m2!1sen!2sin!4v1704896000000!5m2!1sen!2sin"
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Dental World Jaipur Location Map - Best Dental Solutions in Jaipur"
-                className="w-full h-full"
-              ></iframe>
-            </div>
-            <div className="mt-4">
-              <Link
-                href="https://www.google.com/maps/dir/26.9254209,75.7329493/Dental+World+%E2%80%93+Multispeciality+Dental+Clinic,+Jaipur,+Sushilpura,+Ajmer+Rd,+near+community+centre,+Sodala,+Jaipur,+Rajasthan+302006/@26.9101162,75.7252934,13.66z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x396db463bdfd4f73:0xf07e86b30000000!2m2!1d75.764811!2d26.9000035?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-400 hover:text-blue-300 text-sm inline-flex items-center"
-              >
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                </svg>
-                Get Directions
-              </Link>
             </div>
           </div>
 

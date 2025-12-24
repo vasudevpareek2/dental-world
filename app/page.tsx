@@ -348,6 +348,7 @@ export default function Home() {
                 <li><Link href="#about" className="text-gray-400 hover:text-white">About Us</Link></li>
                 <li><Link href="#services" className="text-gray-400 hover:text-white">Services</Link></li>
                 <li><Link href="/treatments" className="text-gray-400 hover:text-white">Treatments</Link></li>
+                <li><Link href="/blogs" className="text-gray-400 hover:text-white">Blog</Link></li>
                 <li><Link href="#gallery" className="text-gray-400 hover:text-white">Gallery</Link></li>
                 <li><Link href="#testimonials" className="text-gray-400 hover:text-white">Testimonials</Link></li>
                 <li><Link href="#contact" className="text-gray-400 hover:text-white">Contact</Link></li>
@@ -394,6 +395,37 @@ export default function Home() {
                   <li>Sunday: Closed</li>
                 </ul>
               </div>
+            </div>
+          </div>
+
+          {/* Map Section */}
+          <div className="mt-12 pt-8 border-t border-gray-800">
+            <h4 className="text-lg font-semibold mb-4 text-white">Find Us</h4>
+            <div className="w-full h-64 md:h-96 rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3557.234567890123!2d75.762811!3d26.9000035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396db463bdfd4f73%3A0xf07e86b30000000!2sDental%20World%20%E2%80%93%20Multispeciality%20Dental%20Clinic%2C%20Jaipur!5e0!3m2!1sen!2sin!4v1704896000000!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Dental World Jaipur Location Map - Best Dental Solutions in Jaipur"
+                className="w-full h-full"
+              ></iframe>
+            </div>
+            <div className="mt-4">
+              <Link
+                href="https://www.google.com/maps/dir/26.9254209,75.7329493/Dental+World+%E2%80%93+Multispeciality+Dental+Clinic,+Jaipur,+Sushilpura,+Ajmer+Rd,+near+community+centre,+Sodala,+Jaipur,+Rajasthan+302006/@26.9101162,75.7252934,13.66z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x396db463bdfd4f73:0xf07e86b30000000!2m2!1d75.764811!2d26.9000035?entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 text-sm inline-flex items-center"
+              >
+                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                </svg>
+                Get Directions
+              </Link>
             </div>
           </div>
           

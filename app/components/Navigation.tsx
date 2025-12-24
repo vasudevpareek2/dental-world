@@ -24,6 +24,7 @@ export default function Navigation({ currentPage = "home" }: NavigationProps) {
     { href: "/#about", label: "About", id: "about" },
     { href: "/#services", label: "Services", id: "services" },
     { href: "/treatments", label: "Treatments", id: "treatments" },
+    { href: "/blogs", label: "Blog", id: "blogs" },
     { href: "/#gallery", label: "Gallery", id: "gallery" },
     { href: "/#testimonials", label: "Testimonials", id: "testimonials" },
     { href: "/#contact", label: "Contact", id: "contact" },
