@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { GALLERY_IMAGES, SERVICES } from './constants';
 import Navigation from './components/Navigation';
 import AppointmentButton from './components/AppointmentButton';
+import ServicesSlider from './components/ServicesSlider';
 
 export default function Home() {
   // Testimonial data
@@ -66,53 +67,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Doctor Introduction Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:flex lg:items-center lg:justify-between">
-            <div className="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
-              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-6">Meet Our Lead Dentist in Jaipur</h2>
-              <h3 className="text-2xl font-semibold text-blue-600 mb-4">Dr. Satyendra Singh</h3>
-              <p className="text-lg text-gray-600 mb-4">BDS, MDS - Specialist in Root canal therapy & Restorative Dentistry</p>
-              <p className="text-gray-600 mb-6">
-                With 5 years of dedicated experience in dentistry, Dr. Satyendra Singh is committed to providing the best dental solutions in Jaipur 
-                using the latest techniques and technology. He specializes in cosmetic dentistry, smile makeovers, and restorative procedures at Dental World Jaipur.
+      {/* About Our Clinic Section */}
+      <section id="about" className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-blue-400 to-blue-500 rounded-3xl p-12 md:p-16 shadow-2xl">
+            <div className="text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">About Our Clinic</h2>
+              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
+                Dental World Jaipur provides personalized dental care using the latest techniques in a comfortable environment. 
+                Led by Dr. Satyendra Singh, our team is committed to delivering the best dental solutions in Jaipur 
+                with state-of-the-art technology and a patient-centered approach.
               </p>
-              <p className="text-gray-600 mb-8">
-                Dr. Singh believes in creating beautiful, healthy smiles while ensuring patient comfort and satisfaction. 
-                His gentle approach and attention to detail have earned him the trust of countless patients in Jaipur.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <svg className="h-5 w-5 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-gray-700">BDS from Rajasthan Dental College and Hospital</span>
-                </div>
-                <div className="flex items-center">
-                  <svg className="h-5 w-5 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-gray-700">MDS from NIMS Dental College And Hospital</span>
-                </div>
-                <div className="flex items-center">
-                  <svg className="h-5 w-5 text-blue-600 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                  <span className="text-gray-700">5 Years of Experience</span>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-1/2">
-              <div className="rounded-lg overflow-hidden shadow-xl">
-                <Image 
-                  src="/doctor-image.jpg" 
-                  alt="Dr. Satyendra Singh - Best Dentist in Jaipur at Dental World Jaipur"
-                  width={600}
-                  height={700}
-                  className="w-full h-auto"
-                />
-              </div>
+              <Link 
+                href="/about"
+                className="inline-block bg-white text-blue-600 hover:bg-blue-50 font-bold py-4 px-8 rounded-xl text-lg transition duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+              >
+                Learn More About Us
+              </Link>
             </div>
           </div>
         </div>
@@ -129,147 +100,24 @@ export default function Home() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {SERVICES.map((service) => (
-              <div 
-                key={service.id} 
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 group"
-              >
-                <div className="relative h-48 bg-gray-200 overflow-hidden">
-                  <Image 
-                    src={service.image} 
-                    alt={`${service.title} - Dental World Jaipur`}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    className="w-full h-full group-hover:scale-110 transition-transform duration-300"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
-                      {service.category}
-                    </span>
-                  </div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <svg 
-                        className="w-8 h-8 text-blue-600 mb-2" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
-                      >
-                        <path 
-                          strokeLinecap="round" 
-                          strokeLinejoin="round" 
-                          strokeWidth={2} 
-                          d={service.icon}
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <h3 className="text-xl font-semibold text-gray-900">{service.title}</h3>
-                    <svg 
-                      className="w-6 h-6 text-blue-600 flex-shrink-0 ml-2" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2} 
-                        d={service.icon}
-                      />
-                    </svg>
-                  </div>
-                  <p className="text-gray-600 mb-4 leading-relaxed">{service.description}</p>
-                  <div className="border-t border-gray-200 pt-4">
-                    <p className="text-sm font-semibold text-gray-700 mb-2">Key Features:</p>
-                    <ul className="space-y-1">
-                      {service.features.slice(0, 3).map((feature, index) => (
-                        <li key={index} className="flex items-center text-sm text-gray-600">
-                          <svg 
-                            className="w-4 h-4 text-blue-600 mr-2 flex-shrink-0" 
-                            fill="currentColor" 
-                            viewBox="0 0 20 20"
-                          >
-                            <path 
-                              fillRule="evenodd" 
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" 
-                              clipRule="evenodd" 
-                            />
-                          </svg>
-                          {feature}
-                        </li>
-                      ))}
-                      {service.features.length > 3 && (
-                        <li className="text-sm text-blue-600 font-medium">
-                          +{service.features.length - 3} more
-                        </li>
-                      )}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            ))}
+          {/* Services Slider */}
+          <div className="mb-12">
+            <ServicesSlider />
           </div>
 
-          {/* Additional CTA */}
-          <div className="mt-16 text-center">
-            <div className="bg-blue-600 rounded-lg p-8 text-white">
-              <h3 className="text-2xl font-bold mb-4">Need the Best Dental Solutions in Jaipur?</h3>
-              <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-                Dental World Jaipur's experienced team is here to help with all your dental needs. 
-                Contact us today to schedule a consultation at our dental clinic in Jaipur.
-              </p>
-              <AppointmentButton className="inline-block bg-white text-blue-600 font-bold py-3 px-8 rounded-md text-lg hover:bg-blue-50 transition duration-300">
-                Schedule Consultation
-              </AppointmentButton>
-            </div>
+          {/* View All Services Button */}
+          <div className="text-center">
+            <Link 
+              href="/services"
+              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+            >
+              View All Services
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* About Section */}
-      <section id="about" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="lg:flex lg:items-center lg:justify-between">
-            <div className="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
-              <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-6">About Dental World Jaipur - Best Dental Clinic in Jaipur</h2>
-              <p className="text-lg text-gray-600 mb-6">
-                Dental World Jaipur provides personalized dental care using the latest techniques in a comfortable environment. 
-                As one of the best dental clinics in Jaipur, our team of experienced professionals is dedicated to ensuring your visit is as pleasant and effective as possible.
-              </p>
-              <p className="text-lg text-gray-600 mb-8">
-                With state-of-the-art technology and a patient-centered approach, we're committed to delivering the best dental solutions in Jaipur 
-                that meet the highest standards of quality and safety.
-              </p>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-md text-lg transition duration-300">
-                Learn More About Us
-              </button>
-            </div>
-            <div className="lg:w-1/2">
-              <div className="rounded-lg overflow-hidden shadow-xl">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="auto"
-                  className="w-full h-auto"
-                >
-                  <source src="/clinic-interior.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -297,47 +145,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Section */}
-      <section id="gallery" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Dental World Jaipur Gallery</h2>
-            <p className="mt-4 text-xl text-gray-600">Take a look at our dental clinic in Jaipur and services</p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {GALLERY_IMAGES.map((image) => (
-              <div 
-                key={image.id} 
-                className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-              >
-                <div className="aspect-square relative">
-                  <Image 
-                    src={image.src} 
-                    alt={image.alt}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    className="w-full h-full transition-transform duration-300 group-hover:scale-110"
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/0 to-black/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <p className="text-white font-semibold">{image.alt}</p>
-                    <p className="text-white/80 text-sm">{image.category}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      
       {/* Footer */}
       <footer id="contact" className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="col-span-1">
-              <h3 className="text-xl font-bold mb-4">Dental World Jaipur</h3>
+              <div className="flex items-center mb-4">
+                <Image
+                  src="/dental logo.png"
+                  alt="Dental World Jaipur"
+                  width={200}
+                  height={50}
+                  className="h-12 w-auto object-contain mr-3"
+                />
+              </div>
               <p className="text-gray-400">Your trusted partner for the best dental solutions in Jaipur. Comprehensive dental care and beautiful smiles at our dental clinic in Jaipur.</p>
             </div>
             

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import AppointmentButton from "./AppointmentButton";
 
 interface NavigationProps {
@@ -21,11 +22,11 @@ export default function Navigation({ currentPage = "home" }: NavigationProps) {
 
   const navLinks = [
     { href: "/", label: "Home", id: "home" },
-    { href: "/#about", label: "About", id: "about" },
-    { href: "/#services", label: "Services", id: "services" },
+    { href: "/about", label: "About", id: "about" },
+    { href: "/services", label: "Services", id: "services" },
     { href: "/treatments", label: "Treatments", id: "treatments" },
     { href: "/blogs", label: "Blog", id: "blogs" },
-    { href: "/#gallery", label: "Gallery", id: "gallery" },
+    { href: "/gallery", label: "Gallery", id: "gallery" },
     { href: "/#testimonials", label: "Testimonials", id: "testimonials" },
     { href: "/#contact", label: "Contact", id: "contact" },
   ];
@@ -50,11 +51,17 @@ export default function Navigation({ currentPage = "home" }: NavigationProps) {
           <div className="flex-shrink-0 flex items-center">
             <Link
               href="/"
-              className="text-2xl font-bold text-blue-600"
+              className="flex items-center"
               onClick={closeMobileMenu}
               title="Dental World Jaipur - Best Dental Solutions in Jaipur"
             >
-              Dental World Jaipur
+              <Image
+                src="/dental logo.png"
+                alt="Dental World Jaipur"
+                width={180}
+                height={40}
+                className="h-10 w-auto object-contain"
+              />
             </Link>
           </div>
 
