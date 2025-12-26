@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function FloatingSocialIcons() {
   const whatsappNumber = "9784260590"; // Remove spaces for URL
   const whatsappLink = `https://wa.me/91${whatsappNumber}`;
-  const instagramLink = "https://www.instagram.com/vasu_dev_pareek/";
+  const instagramLink = "https://www.instagram.com/dentalworld7695/";
 
   return (
     <div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-4">

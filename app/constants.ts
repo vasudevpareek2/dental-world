@@ -65,33 +65,17 @@ export const SERVICES: Service[] = [
   },
   {
     id: "2",
-    title: "Cosmetic Dentistry",
-    description: "Transform your smile with our advanced cosmetic procedures including veneers, bonding, and smile makeovers.",
+    title: "Aesthetic Dentistry",
+    description: "Transform your smile with our advanced aesthetic procedures including veneers, bonding, and smile makeovers.",
     image: "/cosmetic.jpg",
     category: "Aesthetic",
     features: [
       "Dental veneers",
-      "Composite bonding",
+      "Teeth Whitening",
       "Smile makeovers",
-      "Gum contouring",
       "Aesthetic restorations"
     ],
     icon: "M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-  },
-  {
-    id: "3",
-    title: "Teeth Whitening",
-    description: "Professional teeth whitening treatments for a brighter, more confident smile using safe and effective methods.",
-    image: "/teeth-whitening.jpg",
-    category: "Aesthetic",
-    features: [
-      "In-office whitening",
-      "Take-home kits",
-      "Laser whitening",
-      "Custom trays",
-      "Stain removal"
-    ],
-    icon: "M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
   },
   {
     id: "4",
@@ -103,7 +87,7 @@ export const SERVICES: Service[] = [
       "Pain-free procedures",
       "Single-visit RCT",
       "Advanced techniques",
-      "Crown restoration",
+      "Post and core build up",
       "Post-treatment care"
     ],
     icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
@@ -118,8 +102,7 @@ export const SERVICES: Service[] = [
       "Single tooth implants",
       "Multiple implants",
       "Implant-supported dentures",
-      "Bone grafting",
-      "Full arch restoration"
+      "Full mouth rehabilitation"
     ],
     icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
   },
@@ -131,7 +114,7 @@ export const SERVICES: Service[] = [
     category: "Corrective",
     features: [
       "Traditional braces",
-      "Clear aligners",
+      "Ceramic braces",
       "Invisalign treatment",
       "Retainers",
       "Bite correction"
@@ -152,21 +135,6 @@ export const SERVICES: Service[] = [
       "Surgical procedures"
     ],
     icon: "M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"
-  },
-  {
-    id: "8",
-    title: "Periodontics",
-    description: "Specialized treatment for gum diseases, including scaling, root planing, and gum surgery to restore oral health.",
-    image: "/general-dentistry.jpg",
-    category: "Preventive Care",
-    features: [
-      "Gum disease treatment",
-      "Scaling and root planing",
-      "Gum surgery",
-      "Periodontal maintenance",
-      "Gum health assessment"
-    ],
-    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
   },
   {
     id: "9",
@@ -212,21 +180,6 @@ export const SERVICES: Service[] = [
       "Urgent appointments"
     ],
     icon: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-  },
-  {
-    id: "12",
-    title: "Dental Crowns & Bridges",
-    description: "Restore damaged or missing teeth with custom-made crowns and bridges that match your natural teeth perfectly.",
-    image: "/cosmetic.jpg",
-    category: "Restorative",
-    features: [
-      "Porcelain crowns",
-      "Metal-free crowns",
-      "Fixed bridges",
-      "Same-day crowns",
-      "Custom fabrication"
-    ],
-    icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
   }
 ];
 
@@ -259,7 +212,7 @@ export const TREATMENTS: Treatment[] = [
     slug: "root-canal-therapy",
     name: "Root Canal Therapy",
     shortName: "RCT",
-    coverImage: "/general-dentistry.jpg",
+    coverImage: "/treatments/root canal therapy.jpg",
     description: "Advanced root canal treatment to save infected teeth and eliminate pain.",
     category: "Restorative Dentistry",
     caseStudies: [
@@ -304,7 +257,7 @@ export const TREATMENTS: Treatment[] = [
     slug: "dental-implants",
     name: "Dental Implants",
     shortName: "Implants",
-    coverImage: "/cosmetic.jpg",
+    coverImage: "/treatments/implants.jpg",
     description: "Permanent tooth replacement solution using titanium implants.",
     category: "Restorative Dentistry",
     caseStudies: [
@@ -348,7 +301,7 @@ export const TREATMENTS: Treatment[] = [
     slug: "extractions",
     name: "Tooth Extractions",
     shortName: "Extractions",
-    coverImage: "/general-dentistry.jpg",
+    coverImage: "/treatments/tooth-extraction.jpg",
     description: "Safe and painless tooth removal procedures.",
     category: "Oral Surgery",
     caseStudies: [
@@ -393,7 +346,7 @@ export const TREATMENTS: Treatment[] = [
     slug: "orthodontics",
     name: "Orthodontics",
     shortName: "Ortho",
-    coverImage: "/cosmetic.jpg",
+    coverImage: "/treatments/orthodontics.jpg",
     description: "Comprehensive orthodontic treatment for teeth alignment.",
     category: "Orthodontics",
     caseStudies: [
@@ -437,7 +390,7 @@ export const TREATMENTS: Treatment[] = [
     slug: "suturing",
     name: "Suturing Techniques",
     shortName: "Suturing",
-    coverImage: "/general-dentistry.jpg",
+    coverImage: "/treatments/Suturing Techniques.jpg",
     description: "Advanced suturing techniques for optimal wound healing.",
     category: "Oral Surgery",
     caseStudies: [
@@ -478,7 +431,7 @@ export const TREATMENTS: Treatment[] = [
     slug: "restorative-dentistry",
     name: "Restorative Dentistry",
     shortName: "Restorative",
-    coverImage: "/teeth-whitening.jpg",
+    coverImage: "/treatments/restorative.jpg",
     description: "Comprehensive restorative procedures to restore tooth function and aesthetics.",
     category: "Restorative Dentistry",
     caseStudies: [

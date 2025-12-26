@@ -69,21 +69,36 @@ export default function Home() {
 
       {/* About Our Clinic Section */}
       <section id="about" className="py-20 bg-white">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-blue-400 to-blue-500 rounded-3xl p-12 md:p-16 shadow-2xl">
-            <div className="text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">About Our Clinic</h2>
-              <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Content Block - Left Side */}
+            <div className="order-2 lg:order-1">
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">About Our Clinic</h2>
+              <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
                 Dental World Jaipur provides personalized dental care using the latest techniques in a comfortable environment. 
                 Led by Dr. Satyendra Singh, our team is committed to delivering the best dental solutions in Jaipur 
                 with state-of-the-art technology and a patient-centered approach.
               </p>
               <Link 
                 href="/about"
-                className="inline-block bg-white text-blue-600 hover:bg-blue-50 font-bold py-4 px-8 rounded-xl text-lg transition duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                className="inline-block bg-blue-600 text-white hover:bg-blue-700 font-bold py-4 px-8 rounded-xl text-lg transition duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 Learn More About Us
               </Link>
+            </div>
+            
+            {/* Image Block - Right Side */}
+            <div className="order-1 lg:order-2">
+              <div className="relative h-[500px] lg:h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                <Image
+                  src="/about.jpg"
+                  alt="Dental World Jaipur - Best Dental Clinic in Jaipur"
+                  fill
+                  className="object-cover"
+                  style={{ objectPosition: 'center top' }}
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -212,9 +227,8 @@ export default function Home() {
               <div className="mt-8">
                 <h4 className="text-lg font-semibold mb-4">Opening Hours</h4>
                 <ul className="space-y-2 text-gray-400">
-                  <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
-                  <li>Saturday: 9:00 AM - 2:00 PM</li>
-                  <li>Sunday: Closed</li>
+                  <li>Monday - Saturday: 9:00 AM - 9:00 PM</li>
+                  <li>Sunday: 9:00 AM - 1:00 PM</li>
                 </ul>
               </div>
             </div>

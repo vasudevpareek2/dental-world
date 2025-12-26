@@ -68,9 +68,6 @@ export default async function TreatmentCaseStudiesPage({ params }: PageProps) {
               </div>
             </div>
             <div className="w-full md:w-2/3">
-              <span className="inline-block bg-blue-600 text-white text-sm font-semibold px-4 py-1 rounded-full mb-4">
-                {treatment.category}
-              </span>
               <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">
                 {treatment.name} - Best Dental Solutions in Jaipur | Dental World Jaipur
               </h1>

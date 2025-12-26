@@ -31,7 +31,6 @@ export default function ServicesPage() {
         <div className="relative z-10 h-full flex items-center justify-center text-center text-white p-8">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{selectedService.title}</h1>
-            <p className="text-xl md:text-2xl opacity-90">{selectedService.category}</p>
           </div>
         </div>
       </section>
@@ -72,11 +71,6 @@ export default function ServicesPage() {
                         </svg>
                         <div>
                           <div className="font-medium">{service.title}</div>
-                          <div className={`text-sm ${
-                            selectedService.id === service.id ? "text-blue-100" : "text-gray-500"
-                          }`}>
-                            {service.category}
-                          </div>
                         </div>
                       </div>
                     </button>
@@ -104,9 +98,6 @@ export default function ServicesPage() {
                         d={selectedService.icon}
                       />
                     </svg>
-                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
-                      {selectedService.category}
-                    </span>
                   </div>
                   <h2 className="text-3xl font-bold text-gray-900 mb-4">{selectedService.title}</h2>
                   <p className="text-lg text-gray-600 leading-relaxed">{selectedService.description}</p>

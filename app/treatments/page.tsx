@@ -47,9 +47,6 @@ export default function TreatmentsPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6">
-                      <span className="inline-block bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-2">
-                        {treatment.category}
-                      </span>
                       <h3 className="text-2xl font-bold text-white mb-1">
                         {treatment.name}
                       </h3>
