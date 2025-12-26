@@ -52,7 +52,7 @@ export const SERVICES: Service[] = [
     id: "1",
     title: "General Dentistry",
     description: "Comprehensive routine dental care including checkups, cleanings, fillings, and preventive treatments to maintain optimal oral health.",
-    image: "/general-dentistry.jpg",
+    image: "/services/general-dentistry.jpg",
     category: "Preventive Care",
     features: [
       "Routine dental checkups",
@@ -67,7 +67,7 @@ export const SERVICES: Service[] = [
     id: "2",
     title: "Aesthetic Dentistry",
     description: "Transform your smile with our advanced aesthetic procedures including veneers, bonding, and smile makeovers.",
-    image: "/cosmetic.jpg",
+    image: "/services/aisthetic-dentistry.jpg",
     category: "Aesthetic",
     features: [
       "Dental veneers",
@@ -81,7 +81,7 @@ export const SERVICES: Service[] = [
     id: "4",
     title: "Root Canal Therapy",
     description: "Advanced root canal treatment to save infected teeth, eliminate pain, and restore function with minimal discomfort.",
-    image: "/general-dentistry.jpg",
+    image: "/services/root canal therapy.jpg",
     category: "Restorative",
     features: [
       "Pain-free procedures",
@@ -96,7 +96,7 @@ export const SERVICES: Service[] = [
     id: "5",
     title: "Dental Implants",
     description: "Permanent tooth replacement solution using titanium implants that look, feel, and function like natural teeth.",
-    image: "/cosmetic.jpg",
+    image: "/services/implants.jpg",
     category: "Restorative",
     features: [
       "Single tooth implants",
@@ -110,7 +110,7 @@ export const SERVICES: Service[] = [
     id: "6",
     title: "Orthodontics",
     description: "Comprehensive orthodontic treatment including braces and clear aligners to straighten teeth and correct bite issues.",
-    image: "/cosmetic.jpg",
+    image: "/services/orthodontics.jpg",
     category: "Corrective",
     features: [
       "Traditional braces",
@@ -125,7 +125,7 @@ export const SERVICES: Service[] = [
     id: "7",
     title: "Oral Surgery",
     description: "Expert surgical procedures including extractions, wisdom teeth removal, and oral pathology treatment.",
-    image: "/general-dentistry.jpg",
+    image: "/services/oral surgery.jpg",
     category: "Surgical",
     features: [
       "Tooth extractions",
@@ -140,7 +140,7 @@ export const SERVICES: Service[] = [
     id: "9",
     title: "Pediatric Dentistry",
     description: "Gentle and friendly dental care for children, ensuring healthy smiles from an early age with specialized techniques.",
-    image: "/general-dentistry.jpg",
+    image: "/services/Pediatric Dentistry.jpg",
     category: "Specialized",
     features: [
       "Child-friendly environment",
@@ -155,7 +155,7 @@ export const SERVICES: Service[] = [
     id: "10",
     title: "Prosthodontics",
     description: "Advanced prosthetic solutions including crowns, bridges, and dentures to restore function and aesthetics.",
-    image: "/cosmetic.jpg",
+    image: "/services/Prosthodontics.jpg",
     category: "Restorative",
     features: [
       "Dental crowns",
@@ -170,7 +170,7 @@ export const SERVICES: Service[] = [
     id: "11",
     title: "Emergency Dentistry",
     description: "Immediate care for dental emergencies including toothaches, broken teeth, and urgent dental issues.",
-    image: "/general-dentistry.jpg",
+    image: "/services/emergency dentistry.jpg",
     category: "Emergency",
     features: [
       "24/7 emergency care",

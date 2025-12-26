@@ -18,16 +18,8 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-gray-50">
       <Navigation currentPage="services" />
 
-      {/* Hero Section with Main Image */}
-      <section className="relative h-96 bg-gradient-to-r from-blue-600 to-blue-800 overflow-hidden">
-        <div className="absolute inset-0">
-          <Image
-            src={selectedService.image}
-            alt={selectedService.title}
-            fill
-            className="object-cover opacity-30"
-          />
-        </div>
+      {/* Hero Section */}
+      <section className="relative h-64 bg-gradient-to-r from-blue-600 to-blue-800">
         <div className="relative z-10 h-full flex items-center justify-center text-center text-white p-8">
           <div className="max-w-4xl">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">{selectedService.title}</h1>
@@ -104,12 +96,13 @@ export default function ServicesPage() {
                 </div>
 
                 {/* Service Image */}
-                <div className="relative h-64 md:h-80 rounded-lg overflow-hidden mb-8">
+                <div className="relative h-96 md:h-[500px] lg:h-[600px] rounded-lg overflow-hidden mb-8 bg-gray-100">
                   <Image
                     src={selectedService.image}
                     alt={selectedService.title}
                     fill
-                    className="object-cover"
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 66vw"
                   />
                 </div>
 
