@@ -1,0 +1,37 @@
+{
+  "spreadsheetId": "13yOu7z_IG8eGvmrcKuVV0SKoSXJSSnJ3CQy0R36IcC0",
+  "spreadsheetUrl": "https://docs.google.com/spreadsheets/d/13yOu7z_IG8eGvmrcKuVV0SKoSXJSSnJ3CQy0R36IcC0/edit?gid=0#gid=0",
+  "sheetName": "APPOINTMENTS",
+  "columns": {
+    "name": "A",
+    "date": "B",
+    "time": "C",
+    "phone": "D"
+  },
+  "columnHeaders": {
+    "A": "NAME",
+    "B": "DATE",
+    "C": "TIME",
+    "D": "PHONE NO"
+  },
+  "instructions": {
+    "step1": "Go to https://script.google.com/",
+    "step2": "Click 'New Project'",
+    "step3": "Paste the code from google-apps-script.js",
+    "step4": "The Sheet ID is already configured in the script",
+    "step5": "Click 'Deploy' > 'New deployment'",
+    "step6": "Select type: 'Web app'",
+    "step7": "Execute as: 'Me'",
+    "step8": "Who has access: 'Anyone'",
+    "step9": "Click 'Deploy'",
+    "step10": "Copy the Web App URL and add it to your .env.local file as GOOGLE_SCRIPT_URL"
+  },
+  "apiEndpoint": "/api/appointment",
+  "dataFormat": {
+    "name": "string",
+    "date": "string (YYYY-MM-DD)",
+    "time": "string (HH:MM)",
+    "phone": "string"
+  }
+}
+

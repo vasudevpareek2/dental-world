@@ -5,7 +5,7 @@
  * 1. Go to https://script.google.com/
  * 2. Click "New Project"
  * 3. Paste this code
- * 4. The Sheet ID is already configured: 1YHVmsyH-XeKAZbSgwOSUeyU2bOu2s6DmRMtljQ9l0s4
+ * 4. The Sheet ID is already configured: 13yOu7z_IG8eGvmrcKuVV0SKoSXJSSnJ3CQy0R36IcC0
  * 5. Click "Deploy" > "New deployment"
  * 6. Select type: "Web app"
  * 7. Execute as: "Me"
@@ -13,13 +13,13 @@
  * 9. Click "Deploy"
  * 10. Copy the Web App URL and add it to your .env.local file as GOOGLE_SCRIPT_URL
  * 
- * Sheet URL: https://docs.google.com/spreadsheets/d/1YHVmsyH-XeKAZbSgwOSUeyU2bOu2s6DmRMtljQ9l0s4/edit
+ * Sheet URL: https://docs.google.com/spreadsheets/d/13yOu7z_IG8eGvmrcKuVV0SKoSXJSSnJ3CQy0R36IcC0/edit?gid=0#gid=0
  */
 
 function doPost(e) {
   try {
     // Get the active spreadsheet
-    const SHEET_ID = '1YHVmsyH-XeKAZbSgwOSUeyU2bOu2s6DmRMtljQ9l0s4';
+    const SHEET_ID = '13yOu7z_IG8eGvmrcKuVV0SKoSXJSSnJ3CQy0R36IcC0';
     const sheet = SpreadsheetApp.openById(SHEET_ID).getActiveSheet();
     
     // Parse the JSON data

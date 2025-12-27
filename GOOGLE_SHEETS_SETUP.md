@@ -7,7 +7,7 @@ This guide will help you set up the Google Sheets integration for the appointmen
 1. Go to [Google Apps Script](https://script.google.com/)
 2. Click **"New Project"**
 3. Delete the default code and paste the code from `google-apps-script.js` file
-4. The Sheet ID is already configured: `1YHVmsyH-XeKAZbSgwOSUeyU2bOu2s6DmRMtljQ9l0s4`
+4. The Sheet ID is already configured: `13yOu7z_IG8eGvmrcKuVV0SKoSXJSSnJ3CQy0R36IcC0`
 5. Click **"Save"** (Ctrl+S or Cmd+S)
 6. Give your project a name (e.g., "Dental Clinic Appointments")
 
