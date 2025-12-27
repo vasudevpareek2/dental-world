@@ -143,13 +143,43 @@ export default function AboutPage() {
                       <svg className="h-5 w-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
-                      <span className="text-gray-700">Cosmetic Dentistry</span>
+                      <span className="text-gray-700">Aesthetic Dentistry</span>
                     </div>
                     <div className="flex items-center">
                       <svg className="h-5 w-5 text-blue-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                       <span className="text-gray-700">Smile Makeovers</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-semibold text-gray-900 mb-3">Clinical Achievements</h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-700 font-medium">Root Canal Therapy</span>
+                        <span className="text-blue-600 font-bold text-lg">1000+</span>
+                      </div>
+                    </div>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-700 font-medium">Tooth Extractions</span>
+                        <span className="text-blue-600 font-bold text-lg">50+</span>
+                      </div>
+                    </div>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-700 font-medium">Aesthetic Dentistry</span>
+                        <span className="text-blue-600 font-bold text-lg">200+</span>
+                      </div>
+                    </div>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-700 font-medium">Restorative Procedures</span>
+                        <span className="text-blue-600 font-bold text-lg">300+</span>
+                      </div>
                     </div>
                   </div>
                 </div>
