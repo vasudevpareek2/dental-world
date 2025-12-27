@@ -166,7 +166,7 @@ export default function AboutPage() {
                     <div className="bg-blue-50 rounded-lg p-4">
                       <div className="flex items-center justify-between">
                         <span className="text-gray-700 font-medium">Tooth Extractions</span>
-                        <span className="text-blue-600 font-bold text-lg">50+</span>
+                        <span className="text-blue-600 font-bold text-lg">500+</span>
                       </div>
                     </div>
                     <div className="bg-blue-50 rounded-lg p-4">
@@ -179,6 +179,18 @@ export default function AboutPage() {
                       <div className="flex items-center justify-between">
                         <span className="text-gray-700 font-medium">Restorative Procedures</span>
                         <span className="text-blue-600 font-bold text-lg">300+</span>
+                      </div>
+                    </div>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-700 font-medium">Dental Implants</span>
+                        <span className="text-blue-600 font-bold text-lg">50+</span>
+                      </div>
+                    </div>
+                    <div className="bg-blue-50 rounded-lg p-4">
+                      <div className="flex items-center justify-between">
+                        <span className="text-gray-700 font-medium">Orthodontic Treatments</span>
+                        <span className="text-blue-600 font-bold text-lg">30+</span>
                       </div>
                     </div>
                   </div>
